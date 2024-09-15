@@ -1,0 +1,15 @@
+site_name: RoboRambler Documentations
+nav:
+      - Home: index.md
+      - Getting Started:
+              - Installation: getting-started/installation.md
+      - Others:
+              - Trouble Shooting: trouble-shooting.md
+              - About: about.md
+theme: material
+markdown_extensions:
+      - admonition
+      - pymdownx.highlight:
+              pygments_lang_class: true
+      - pymdownx.details
+      - pymdownx.superfences
