@@ -1,0 +1,750 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../../trouble-shooting/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>Installation - RoboRambler Documentations</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.35f28582.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#installation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="RoboRambler Documentations" class="md-header__button md-logo" aria-label="RoboRambler Documentations" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            RoboRambler Documentations
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Installation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="RoboRambler Documentations" class="md-nav__button md-logo" aria-label="RoboRambler Documentations" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    RoboRambler Documentations
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#os-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      OS Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ros2-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      ROS2 Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pulling-and-building-rambler-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pulling and Building Rambler Software
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pulling and Building Rambler Software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tools-and-utilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tools and Utilities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-ssh-key-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Git SSH-Key Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-base-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code-base Setup
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Others
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Others
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trouble-shooting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Trouble Shooting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#os-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      OS Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ros2-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      ROS2 Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pulling-and-building-rambler-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pulling and Building Rambler Software
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pulling and Building Rambler Software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tools-and-utilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tools and Utilities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-ssh-key-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Git SSH-Key Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-base-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code-base Setup
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="installation">Installation</h1>
+<p>This document will run you through of process of setting up environment to run RoboRambler's Software Stack.</p>
+<h2 id="os-installation">OS Installation</h2>
+<p>You will need a working <a href="https://releases.ubuntu.com/jammy/">Ubuntu 22.04</a> OS to run our control stack, simulation, and hardware interface.</p>
+<p>You have two options:</p>
+<ul>
+<li>Use native installation or <a href="https://learn.microsoft.com/en-us/windows/wsl/install">Windows Subsystem for Linux</a> (Recommended).</li>
+<li>Use a NoVNC server installation with <a href="https://www.docker.com/">Docker</a> (Slow, Not Recommended).</li>
+</ul>
+<p>For native installation (on a brand-new computer or dual-booting with Windows), check <a href="https://www.tomshardware.com/how-to/dual-boot-linux-and-windows-11">this tutorial</a>. For NoVNC server installation, checkout <a href="../no-vnc/">this separate document</a>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Dual-booting means you have to mess-around with your existing OS and data. <strong>THIS WILL BRING POTENTIAL HAZARDS TO YOU DATA AND IT CAN BE IN-RECOVERABLE.</strong> Always make you fully understand the potential risk dual-booting brings, and always back-up your drive and data. If you are not sure about any step inside dual-booting, ask someone with experience.</p>
+</div>
+<h2 id="ros2-installation">ROS2 Installation</h2>
+<p>RoboRambler uses <a href="https://www.ros.org/">Robot Operating System</a>, version <a href="https://docs.ros.org/en/humble/index.html">Humble Hawksbill</a> (humble for short). To install ROS2 humble, please check <a href="https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html">the official installation guide</a>.</p>
+<p>Note that if you followed the NoVNC installation procedure above, you already have ROS2 installed.</p>
+<p>To check if ROS2 installation is successful, open command terminal and type:</p>
+<div class="language-bash highlight"><pre><span></span><code>ros2
+ros2<span class="w"> </span>run<span class="w"> </span>turtlesim<span class="w"> </span>turtlesim_node
+</code></pre></div>
+<p>You should be able to see the prompt printed first, then a blue window showing a turtle inside it, like shown below.</p>
+<p><img alt="Screenshot" src="../turtlesim.png" /></p>
+<h2 id="pulling-and-building-rambler-software">Pulling and Building Rambler Software</h2>
+<p>Now you have ROS2 installed. It's time to pull and setup our software!</p>
+<h3 id="tools-and-utilities">Tools and Utilities</h3>
+<p>Let's first install all the compilation tools and utilities. In RoboRambler, we use <a href="https://clang.llvm.org/">Clang</a> based on LLVM. Clang is a faster, modern, and feature-rich complication and development tool set. However, for potential compatibility issues, we will also install the basic <a href="https://gcc.gnu.org/">GNU Complier Collection</a>.</p>
+<div class="language-bash highlight"><pre><span></span><code><span class="c1"># install gcc, most linux distro have it by default</span>
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>build-essential
+
+<span class="c1"># install clang-18</span>
+wget<span class="w"> </span>https://apt.llvm.org/llvm.sh
+chmod<span class="w"> </span>u+x<span class="w"> </span>llvm.sh
+sudo<span class="w"> </span>./llvm.sh<span class="w"> </span><span class="m">18</span>
+
+<span class="c1"># test if installation is successful</span>
+gcc<span class="w"> </span>--version
+g++<span class="w"> </span>--version
+clang-18<span class="w"> </span>--version
+clang-cpp-18<span class="w"> </span>--version<span class="w"> </span>
+</code></pre></div>
+<p>If everything above run without error, then your complication tool installation is successful.</p>
+<p>Next, we are going to install <a href="https://git-scm.com/">Git</a>. Git is a distributed version control system. Type in:</p>
+<div class="language-bash highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>git
+git<span class="w"> </span>--version
+</code></pre></div>
+<p>Next, we are going to install <a href="https://code.visualstudio.com/">Visual Studio Code</a> (VSCode for short), which is a great editor for C++ and ROS development. Check <a href="https://code.visualstudio.com/docs/setup/linux">this site</a> for detailed install instruction. Here we list a snippet of code for apt-based installation.</p>
+<div class="language-bash highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;code code/add-microsoft-repo boolean true&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>debconf-set-selections
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>wget<span class="w"> </span>gpg
+
+wget<span class="w"> </span>-qO-<span class="w"> </span>https://packages.microsoft.com/keys/microsoft.asc<span class="w"> </span><span class="p">|</span><span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span>&gt;<span class="w"> </span>packages.microsoft.gpg
+sudo<span class="w"> </span>install<span class="w"> </span>-D<span class="w"> </span>-o<span class="w"> </span>root<span class="w"> </span>-g<span class="w"> </span>root<span class="w"> </span>-m<span class="w"> </span><span class="m">644</span><span class="w"> </span>packages.microsoft.gpg<span class="w"> </span>/etc/apt/keyrings/packages.microsoft.gpg
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main&quot;</span><span class="w"> </span><span class="p">|</span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/vscode.list<span class="w"> </span>&gt;<span class="w"> </span>/dev/null
+rm<span class="w"> </span>-f<span class="w"> </span>packages.microsoft.gpg
+
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>apt-transport-https
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>code
+</code></pre></div>
+<p>After installation, go to a directory you want, and type in <code>code .</code>. You should see the VSCode GUI interface popping up. Setup you VSCode by installing the following plugins:</p>
+<ul>
+<li>Clangd (For C/C++ code insights, analysis, formatting and auto-completion)</li>
+<li>Python (For Python code insights &amp; auto-completion)</li>
+<li>ROS (For ROS development)</li>
+<li>Docker (Optional, for connecting to images)</li>
+</ul>
+<p>For all plugins, check to have <em>Microsoft</em> has the author.</p>
+<p>Note that if you are running NoVNC installation, it is also possible to directly attach to the running container (so you don't need to have VSCode installed inside NoVNC for code editing!) After installing the Docker plugin, just right click on the running image and choose <em>"Attach Visual Studio Code"</em>.</p>
+<p>Finally, there's an optional bash configuration file you may want to have. ROS2 package complication always has a long line of arguments - which makes quick testing and prototyping really painful. By inserting these lines into the <code>~/.bash_aliases</code> file, you are able to use shortcuts.</p>
+<div class="language-bash highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">CC</span><span class="o">=</span>clang-18
+<span class="nb">export</span><span class="w"> </span><span class="nv">CXX</span><span class="o">=</span>clang++-18
+<span class="nb">export</span><span class="w"> </span><span class="nv">CMAKE_C_COMPILER</span><span class="o">=</span>clang-18
+<span class="nb">export</span><span class="w"> </span><span class="nv">CMAKE_CXX_COMPILER</span><span class="o">=</span>clang++-18
+<span class="c1"># export CC=gcc</span>
+<span class="c1"># export CXX=g++</span>
+<span class="c1"># export CMAKE_C_COMPILER=gcc</span>
+<span class="c1"># export CMAKE_CXX_COMPILER=g++</span>
+
+<span class="nb">alias</span><span class="w"> </span><span class="nv">bd</span><span class="o">=</span><span class="s1">&#39;colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_CXX_FLAGS=&quot;-w -O0 -g&quot;&#39;</span>
+bds<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">  </span>colcon<span class="w"> </span>build<span class="w"> </span>--symlink-install<span class="w"> </span>--cmake-args<span class="w"> </span>-DCMAKE_EXPORT_COMPILE_COMMANDS<span class="o">=</span>ON<span class="w"> </span>-DCMAKE_CXX_FLAGS<span class="o">=</span><span class="s2">&quot;-w -O0&quot;</span><span class="w"> </span>--packages-select<span class="o">=</span><span class="nv">$1</span>
+<span class="o">}</span>
+<span class="nb">alias</span><span class="w"> </span>bd-release<span class="o">=</span><span class="s1">&#39;colcon build --symlink-install --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_BUILD_TYPE=RelWithDebInfo&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">rs</span><span class="o">=</span><span class="s2">&quot;source install/setup.bash&quot;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">rclean</span><span class="o">=</span><span class="s2">&quot;rm -r build/ log/ install/&quot;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">rosdepinstall</span><span class="o">=</span><span class="s2">&quot;rosdep install --from-paths src --ignore-src -r -y&quot;</span>
+
+<span class="nb">alias</span><span class="w"> </span><span class="nv">bashconfigalias</span><span class="o">=</span><span class="s2">&quot;code ~/.bash_aliases&quot;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">bashconfig</span><span class="o">=</span><span class="s2">&quot;code ~/.bashrc&quot;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">bashconfigup</span><span class="o">=</span><span class="s2">&quot;source ~/.bashrc&quot;</span>
+</code></pre></div>
+<p>Note that you may change these aliases to anything you like. In the following document we are going to list full command, without any alias usage.</p>
+<h3 id="git-ssh-key-setup">Git SSH-Key Setup</h3>
+<p>To pull code from git, we need a way for our computer to be authenticated as being owned by you. The authentication method we usually use is <strong>Secure Shell Protocal</strong> (ssh for short). To set up ssh for GitHub, check out <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">how to generate it</a>, and <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">how to add a new key to your GitHub Account</a>.</p>
+<h3 id="code-base-setup">Code-base Setup</h3>
+<p>First, go to a directly you want the code base to be. Then, run the following commands:</p>
+<div class="language-bash highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>rm_ws/src
+<span class="nb">cd</span><span class="w"> </span>rm_ws/src
+</code></pre></div>
+<p>We just created a ROS2 workspace named <code>rm_ws</code>, and has entered the source code directly <code>src</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In ROS2 development, the so-called <em>Workspace Directory</em> or <em>Project Directory</em> always refer to level like <code>rm_ws</code> we just created. It is <strong>above</strong> the <code>src</code> directory. For any complication, <strong>Only do it when you are under the Workspace Directory</strong>, or you will find that you have a lot of miss-placed files.</p>
+</div>
+<p>Inside <code>src</code>, we are going to pull all the code we have right now. Make sure you have access to our repositories, and you are under <code>src</code> directory, and type in the following command:</p>
+<div class="language-bash highlight"><pre><span></span><code><span class="c1"># init repo</span>
+git<span class="w"> </span>init
+
+<span class="c1"># pull codes</span>
+git<span class="w"> </span>submodule<span class="w"> </span>add<span class="w"> </span>git@github.com:RM-GT/rm_common.git
+git<span class="w"> </span>submodule<span class="w"> </span>add<span class="w"> </span>git@github.com:RM-GT/rm_controllers.git
+git<span class="w"> </span>submodule<span class="w"> </span>add<span class="w"> </span>git@github.com:RM-GT/rm_hw.git
+git<span class="w"> </span>submodule<span class="w"> </span>add<span class="w"> </span>git@github.com:RM-GT/rm_vision.git
+git<span class="w"> </span>submodule<span class="w"> </span>add<span class="w"> </span>git@github.com:RM-GT/rm_descriptions.git
+git<span class="w"> </span>submodule<span class="w"> </span>add<span class="w"> </span>git@github.com:RM-GT/rm_utils.git
+
+<span class="c1"># pull external dependencies</span>
+mkdir<span class="w"> </span>ext<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>ext
+git<span class="w"> </span>submodule<span class="w"> </span>add<span class="w"> </span>git@github.com:robomaster-oss/rmoss_core.git
+git<span class="w"> </span>submodule<span class="w"> </span>add<span class="w"> </span>git@github.com:robomaster-oss/rmoss_interfaces.git
+git<span class="w"> </span>submodule<span class="w"> </span>add<span class="w"> </span>git@github.com:RoverRobotics-forks/serial-ros2.git
+
+<span class="c1"># install parsing utility package for python</span>
+pip<span class="w"> </span>install<span class="w"> </span>Cheetah3
+</code></pre></div>
+<p>After successful pulling, return to the workspace directory. Then, we are going to use ROS2's package management tool <code>rosdep</code> to automatically fetch all the external dependencies.</p>
+<div class="language-bash highlight"><pre><span></span><code>rosdep<span class="w"> </span>init
+rosdep<span class="w"> </span>install<span class="w"> </span>--from-paths<span class="w"> </span>src<span class="w"> </span>--ignore-src<span class="w"> </span>-r<span class="w"> </span>-y
+</code></pre></div>
+<p>You should see <code>#All required rosdeps installed successfully</code> at the end.</p>
+<p>Finally we are able to build the code base!</p>
+<div class="language-bash highlight"><pre><span></span><code><span class="c1"># setup compliers</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">CC</span><span class="o">=</span>clang-18
+<span class="nb">export</span><span class="w"> </span><span class="nv">CXX</span><span class="o">=</span>clang++-18
+<span class="nb">export</span><span class="w"> </span><span class="nv">CMAKE_C_COMPILER</span><span class="o">=</span>clang-18
+<span class="nb">export</span><span class="w"> </span><span class="nv">CMAKE_CXX_COMPILER</span><span class="o">=</span>clang++-18
+
+<span class="c1"># build the project!</span>
+colcon<span class="w"> </span>build<span class="w"> </span>--symlink-install<span class="w"> </span>--cmake-args<span class="w"> </span>-DCMAKE_BUILD_TYPE<span class="o">=</span>Debug<span class="w"> </span>-DCMAKE_EXPORT_COMPILE_COMMANDS<span class="o">=</span>ON<span class="w"> </span>-DCMAKE_CXX_FLAGS<span class="o">=</span><span class="s2">&quot;-w -O0 -g&quot;</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+    
+  </body>
+</html>
