@@ -1,6 +1,6 @@
-# Installation
+# ROS-based Software Stack Installation
 
-This document will run you through of process of setting up environment to run RoboRambler's Software Stack.
+This document will run you through of process of setting up environment to run RoboRambler's ROS-based Software Stack.
 
 ## OS Installation
 
@@ -32,7 +32,7 @@ ros2 run turtlesim turtlesim_node
 
 You should be able to see the prompt printed first, then a blue window showing a turtle inside it, like shown below.
 
-![Screenshot](turtlesim.png)
+![Screenshot](images/turtlesim.png)
 
 ## Pulling and Building Rambler Software
 

@@ -1,15 +1,17 @@
 site_name: RoboRambler Documentations
 nav:
-      - Home: index.md
-      - Getting Started:
-              - Installation: getting-started/installation.md
-      - Others:
-              - Trouble Shooting: trouble-shooting.md
-              - About: about.md
+  - Home: index.md
+  - Getting Started:
+      - ROS Installation: getting-started/ros-installation.md
+      - Embedded Development Installation: getting-started/embedded-installation.md
+      - NoVNC Setup: getting-started/no-vnc.md
+  - Others:
+      - Trouble Shooting: trouble-shooting.md
+      - About: about.md
 theme: material
 markdown_extensions:
-      - admonition
-      - pymdownx.highlight:
-              pygments_lang_class: true
-      - pymdownx.details
-      - pymdownx.superfences
+  - admonition
+  - pymdownx.highlight:
+      pygments_lang_class: true
+  - pymdownx.details
+  - pymdownx.superfences
