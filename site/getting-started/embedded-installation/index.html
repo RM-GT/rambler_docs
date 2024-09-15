@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="../ros-installation/">
+      
+      
+        <link rel="next" href="../no-vnc/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -16,7 +20,7 @@
     
     
       
-        <title>Bashrc - RoboRambler Documentations</title>
+        <title>Embedded Development Installation - RoboRambler Documentations</title>
       
     
     
@@ -57,6 +61,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#embedded-development-environment-installation" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -89,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Bashrc
+              Embedded Development Installation
             
           </span>
         </div>
@@ -199,17 +208,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -223,7 +234,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Getting Started
@@ -237,11 +248,63 @@
   
   
     <li class="md-nav__item">
-      <a href="../installation/" class="md-nav__link">
+      <a href="../ros-installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Installation
+    ROS Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Embedded Development Installation
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../no-vnc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NoVNC Setup
   </span>
   
 
@@ -359,6 +422,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -373,9 +438,62 @@
                   
 
 
-  <h1>Bashrc</h1>
-
-
+<h1 id="embedded-development-environment-installation">Embedded Development Environment Installation</h1>
+<h1 id="stm32cubemx">STM32CubeMX</h1>
+<p>The first tool you will need is the STM32CubeMX. You can download it here:</p>
+<p><a href="https://www.st.com/en/development-tools/stm32cubemx.html">STM32CubeMX - STMicroelectronics</a></p>
+<p>Download the suitable version for your system. We Use Version <strong>6.6.1</strong>!</p>
+<p>After downloading just install it using the default options.</p>
+<p>CubeMX is used to set up the processor on board and copy default HAL libraries for our projects.</p>
+<h1 id="arm-compiler">ARM Compiler</h1>
+<p>STM32 is an ARM-based processor. Thus normal compilers such as GCC on our system (usually x86) cannot compile code for it. We need cross-compilation to compile source code for ARM on an x86 machine. For this, we need the GNU ARM compiler. Another option is clang, but we will go with GNU for now.</p>
+<p>Download the GNU Arm toolchain here:</p>
+<p><a href="https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads">Arm GNU Toolchain Downloads - Arm Developer</a></p>
+<p><strong>Use the latest version for bare-metal targets (arm-none-eabi).</strong></p>
+<p>After installation (take note of where it is installed). Test if the compiler is added to your PATH by:</p>
+<div class="language-bash highlight"><pre><span></span><code>arm-none-eabi-gcc<span class="w"> </span>-v
+</code></pre></div>
+<p>This should tell you your version of the ARM GNU GCC compiler. If an error pops up, make sure to add where you installed it to your system PATH. (Default is in /Applications/ARM/bin for Mac users)</p>
+<h1 id="clion">CLion</h1>
+<p>We use CLion for development. Download it from JetBrains. After you have downloaded it, clone our <a href="https://github.com/RM-GT/F407Template">template repo</a> with the recursive option.</p>
+<p>Then open up the whole folder with CLion.</p>
+<p>A first-time opening of CLion would ask you to select the build tools. The default is file since we will specify our compiler in the CMake file later.</p>
+<p>After you open the project folder for the first time, CLion will ask you for the CMake build type specification. The default (debug) is fine. You can just continue to open the project and wait for CLion to configure things for you.</p>
+<p>After all the indexing and other auto-configurations by CLion are done, navigate to CMake on the bottom bar. A successful CMake configuration would look like this:</p>
+<p><img alt="ScreenShot" src="../images/cmake.png" /></p>
+<p>Next, you can try to compile the code with the hammer icon on the top right. If everything goes well, CLion will output something on the bottom area telling you that things have been compiled properly.</p>
+<p><img alt="ScreenShot" src="../images/compile.png" /></p>
+<p>The .elf is the binary file compiled by our compiler. Next, I will show you how to download the firmware to our target board and debug with your code.</p>
+<h1 id="j-link">J-Link</h1>
+<p>J-Link is the debug probe that we use to flash our firmware. Download two things from the following website:</p>
+<p><a href="https://www.segger.com/downloads/jlink/">J-Link / J-Trace Downloads</a></p>
+<ol>
+<li><strong>J-Link Software and Documentation Pack</strong></li>
+<li><strong>Ozone - The J-Link Debugger</strong></li>
+<li>Optional (Systemview)</li>
+</ol>
+<p>Install the J-Link Software first as it contains drivers. Then install Ozone.</p>
+<p>Ozone is the flashed as well as a debugger for our firmware.</p>
+<ol>
+<li>Connect a J-Link to your computer.</li>
+<li>Select the right chip type (Board C is STM32F407IG</li>
+</ol>
+<p><img alt="ScreenShot" src="../images/emb.png" /></p>
+<ol>
+<li>Next step, configure as follows. If you have a J-Link connected, it should show up in the emulator list.</li>
+</ol>
+<p><img alt="ScreenShot" src="../images/emb1.png" /></p>
+<ol>
+<li>Next step open up the elf binary file that we just compiled.</li>
+<li>For optional settings, use the default.</li>
+<li>When you open the project for the first time, you might be shown an error that FreeRTOS awareness is not enabled. To enable it, press apply the fix up. Next, modify this line (Project.SetOSPlugin ("FreeRTOSPlugin");) in the jdebug configuration file for your project’s line by adding _CM4 to the original string. </li>
+</ol>
+<p><img alt="ScreenShot" src="../images/emb2.png" /></p>
+<ol>
+<li>Now you will be able to download the firmware by pressing the start button on the top left corner of the interface. After flashing is complete, the button will become a play button. Press play to start the program on board.</li>
+<li>Next you can open up the UserTasks.cpp file using file→open. Add break points in a task’s loop to start debugging.</li>
+<li>Most of the things we need are hidden in the view menu. I personally add stack and local data, global data, timeline, and watched data for debugging.</li>
+</ol>
 
 
 
