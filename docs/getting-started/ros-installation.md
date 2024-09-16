@@ -143,22 +143,20 @@ We just created a ROS2 workspace named `rm_ws`, and has entered the source code 
 Inside `src`, we are going to pull all the code we have right now. Make sure you have access to our repositories, and you are under `src` directory, and type in the following command:
 
 ```bash
-# init repo
-git init
-
 # pull codes
-git submodule add git@github.com:RM-GT/rm_common.git
-git submodule add git@github.com:RM-GT/rm_controllers.git
-git submodule add git@github.com:RM-GT/rm_hw.git
-git submodule add git@github.com:RM-GT/rm_vision.git
-git submodule add git@github.com:RM-GT/rm_descriptions.git
-git submodule add git@github.com:RM-GT/rm_utils.git
+git clone git@github.com:RM-GT/rm_common.git
+git clone git@github.com:RM-GT/rm_controllers.git
+git clone git@github.com:RM-GT/rm_hw.git
+git clone git@github.com:RM-GT/rm_vision.git
+git clone git@github.com:RM-GT/rm_descriptions.git
+git clone git@github.com:RM-GT/rm_utils.git
 
 # pull external dependencies
 mkdir ext && cd ext
-git submodule add git@github.com:robomaster-oss/rmoss_core.git
-git submodule add git@github.com:robomaster-oss/rmoss_interfaces.git
-git submodule add git@github.com:RoverRobotics-forks/serial-ros2.git
+git clone git@github.com:robomaster-oss/rmoss_core.git
+git clone git@github.com:robomaster-oss/rmoss_interfaces.git
+git clone git@github.com:RoverRobotics-forks/serial-ros2.git
+cd ../..
 
 # install parsing utility package for python
 pip install Cheetah3
