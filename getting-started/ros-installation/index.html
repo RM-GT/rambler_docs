@@ -701,22 +701,20 @@ bds<span class="o">()</span><span class="w"> </span><span class="o">{</span>
 <p>In ROS2 development, the so-called <em>Workspace Directory</em> or <em>Project Directory</em> always refer to level like <code>rm_ws</code> we just created. It is <strong>above</strong> the <code>src</code> directory. For any complication, <strong>Only do it when you are under the Workspace Directory</strong>, or you will find that you have a lot of miss-placed files.</p>
 </div>
 <p>Inside <code>src</code>, we are going to pull all the code we have right now. Make sure you have access to our repositories, and you are under <code>src</code> directory, and type in the following command:</p>
-<div class="language-bash highlight"><pre><span></span><code><span class="c1"># init repo</span>
-git<span class="w"> </span>init
-
-<span class="c1"># pull codes</span>
-git<span class="w"> </span>submodule<span class="w"> </span>add<span class="w"> </span>git@github.com:RM-GT/rm_common.git
-git<span class="w"> </span>submodule<span class="w"> </span>add<span class="w"> </span>git@github.com:RM-GT/rm_controllers.git
-git<span class="w"> </span>submodule<span class="w"> </span>add<span class="w"> </span>git@github.com:RM-GT/rm_hw.git
-git<span class="w"> </span>submodule<span class="w"> </span>add<span class="w"> </span>git@github.com:RM-GT/rm_vision.git
-git<span class="w"> </span>submodule<span class="w"> </span>add<span class="w"> </span>git@github.com:RM-GT/rm_descriptions.git
-git<span class="w"> </span>submodule<span class="w"> </span>add<span class="w"> </span>git@github.com:RM-GT/rm_utils.git
+<div class="language-bash highlight"><pre><span></span><code><span class="c1"># pull codes</span>
+git<span class="w"> </span>clone<span class="w"> </span>git@github.com:RM-GT/rm_common.git
+git<span class="w"> </span>clone<span class="w"> </span>git@github.com:RM-GT/rm_controllers.git
+git<span class="w"> </span>clone<span class="w"> </span>git@github.com:RM-GT/rm_hw.git
+git<span class="w"> </span>clone<span class="w"> </span>git@github.com:RM-GT/rm_vision.git
+git<span class="w"> </span>clone<span class="w"> </span>git@github.com:RM-GT/rm_descriptions.git
+git<span class="w"> </span>clone<span class="w"> </span>git@github.com:RM-GT/rm_utils.git
 
 <span class="c1"># pull external dependencies</span>
 mkdir<span class="w"> </span>ext<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>ext
-git<span class="w"> </span>submodule<span class="w"> </span>add<span class="w"> </span>git@github.com:robomaster-oss/rmoss_core.git
-git<span class="w"> </span>submodule<span class="w"> </span>add<span class="w"> </span>git@github.com:robomaster-oss/rmoss_interfaces.git
-git<span class="w"> </span>submodule<span class="w"> </span>add<span class="w"> </span>git@github.com:RoverRobotics-forks/serial-ros2.git
+git<span class="w"> </span>clone<span class="w"> </span>git@github.com:robomaster-oss/rmoss_core.git
+git<span class="w"> </span>clone<span class="w"> </span>git@github.com:robomaster-oss/rmoss_interfaces.git
+git<span class="w"> </span>clone<span class="w"> </span>git@github.com:RoverRobotics-forks/serial-ros2.git
+<span class="nb">cd</span><span class="w"> </span>../..
 
 <span class="c1"># install parsing utility package for python</span>
 pip<span class="w"> </span>install<span class="w"> </span>Cheetah3
